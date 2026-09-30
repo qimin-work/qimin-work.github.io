@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>陈绮敏 · 行政专员 · 求职简历</title>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-64.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #F3EEE2; --card: #FFFCF4; --ink: #141311; --ink-soft: #4A463F;
+  --orange: #FF5A1E; --blue: #2B4BE0;
+  --border: 3px solid var(--ink);
+  --font-cn: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-display: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-mono: 'Space Mono', 'SF Mono', Consolas, monospace;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-cn);
+  font-size: 14px;
+  line-height: 1.7;
+  padding: 28px 18px 80px;
+}
+.sheet {
+  max-width: 860px;
+  margin: 0 auto;
+  background: var(--card);
+  border: 4px solid var(--ink);
+  box-shadow: 10px 10px 0 var(--ink);
+}
+.sheet-head {
+  display: flex;
+  gap: 22px;
+  padding: 26px 30px;
+  border-bottom: var(--border);
+  align-items: center;
+  flex-wrap: wrap;
+}
+.avatar {
+  width: 96px; height: 96px;
+  border: var(--border);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
+.head-main { flex: 1; min-width: 240px; }
+.head-name {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 42px;
+  line-height: 1.1;
+  letter-spacing: .02em;
+  text-shadow: 3px 3px 0 rgba(255, 90, 30, .8);
+}
+.head-role { font-family: var(--font-mono); font-size: 12.5px; font-weight: 700; letter-spacing: .06em; margin-top: 4px; }
+.head-role em { font-style: normal; color: var(--blue); }
+.head-meta {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  line-height: 2;
+  color: var(--ink-soft);
+}
+.head-meta b { color: var(--ink); }
+.file-no {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 4px 9px;
+  align-self: flex-start;
+}
+.sec { padding: 22px 30px; border-bottom: 2px solid var(--ink); }
+.sec:last-child { border-bottom: none; }
+.sec-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.sec-no {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--orange);
+  color: #fff;
+  padding: 3px 8px;
+  border: 2px solid var(--ink);
+}
+.sec-title h2 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1;
+}
+.sec-line { flex: 1; border-top: 2px solid var(--ink); }
+
+.item { margin-bottom: 16px; }
+.item:last-child { margin-bottom: 0; }
+.item-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.item-title { font-size: 16px; font-weight: 900; }
+.item-title span { font-weight: 500; color: var(--ink-soft); font-size: 13.5px; margin-left: 8px; }
+.item-time { font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: var(--blue); white-space: nowrap; }
+.pts { margin-top: 6px; }
+.pts li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--ink-soft);
+  margin-bottom: 3px;
+  list-style: none;
+}
+.pts li::before { content: '▪'; position: absolute; left: 2px; color: var(--orange); }
+.pts strong { color: var(--ink); }
+.kv { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px 24px; }
+.kv li { list-style: none; font-size: 14px; }
+.kv b { color: var(--blue); font-family: var(--font-mono); font-size: 12px; margin-right: 6px; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tags span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  border: 2px solid var(--ink);
+  padding: 4px 9px;
+  background: var(--paper);
+}
+.tags .t-o { background: var(--orange); color: #fff; }
+.tags .t-b { background: var(--blue); color: #fff; }
+
+.actions {
+  max-width: 860px;
+  margin: 26px auto 0;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 14px 24px;
+  border: 3px solid var(--ink);
+  background: var(--card);
+  color: var(--ink);
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 4px 4px 0 var(--ink);
+  transition: transform .15s ease, box-shadow .15s ease;
+  font-family: var(--font-cn);
+}
+.btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
+.btn-solid { background: var(--orange); color: #fff; }
+
+@media print {
+  body { padding: 0; background: #fff; font-size: 12.5px; }
+  .sheet { border: 2.5px solid #141311; box-shadow: none; max-width: 100%; }
+  .actions { display: none; }
+  .sec { padding: 14px 22px; }
+  .sheet-head { padding: 18px 22px; }
+}
+@media (max-width: 620px) {
+  .head-name { font-size: 32px; }
+  .kv { grid-template-columns: 1fr; }
+  .sheet-head { padding: 20px; }
+  .sec { padding: 18px 20px; }
+}
+</style>
+</head>
+<body>
+
+<div class="sheet">
+  <!-- 头部 -->
+  <header class="sheet-head">
+    <div class="avatar"><img src="images/portrait.jpg" alt="陈绮敏的个人头像"></div>
+    <div class="head-main">
+      <h1 class="head-name">陈绮敏</h1>
+      <p class="head-role">行政专员 / 办公室职员 · <em>OFFICE ADMINISTRATOR</em> · 7 年经验社招</p>
+      <div class="head-meta">
+        <p><b>电话</b> 15817233540　<b>邮箱</b> gzchenqimin@163.com</p>
+        <p><b>坐标</b> 广东深圳（南山）　<b>籍贯</b> 广东茂名　<b>到岗</b> 随时</p>
+      </div>
+    </div>
+    <span class="file-no">FILE CQM-2019-0611</span>
+  </header>
+
+  <!-- 个人概况 -->
+  <section class="sec">
+    <div class="sec-title"><span class="sec-no">00</span><h2>个人概况</h2><span class="sec-line"></span></div>
+    <div class="item">
+      <ul class="pts">
+        <li><strong>7 年</strong>行政事务与综合协调经验，先后在行业协会、公立医院、疾控中心及管理咨询机构任职</li>
+        <li>扎实的行政事务处理能力、<strong>公文写作功底</strong>及跨部门沟通协调能力；擅长会议组织、文件管理、数据报表及活动统筹</li>
+        <li>持<strong>初级统计师证</strong>，熟练使用 Excel 数据透视表、VLOOKUP 函数及 <strong>SQL</strong> 进行数据查询分析</li>
+        <li>执行力强，具备保密意识与服务意识，适应快节奏办公环境，可快速适配企业行政岗位</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 工作经历 -->
+  <section class="sec">
+    <div class="sec-title"><span class="sec-no">01</span><h2>工作经历</h2><span class="sec-line"></span></div>
+    <div class="item">
+      <div class="item-head">
+        <p class="item-title">深圳市卫生经济学会 <span>办公室职员</span></p>
+        <span class="item-time">2022.11 — 2026.05</span>
+      </div>
+      <ul class="pts">
+        <li>负责学会日常行政运转：文件收发、档案管理、办公用品采购与资产管理，保障办公室工作<strong>有序高效</strong></li>
+        <li>统筹管理年度科研课题 200 余项（<strong>累计 849 项</strong>）：申报受理、材料初审、立项备案、结题验收全流程，<strong>建立标准化管理流程</strong>，提升项目流转效率</li>
+        <li>组织多场行业培训及学术会议（通知、议程、场地、签到、会后总结），累计服务参会人员 <strong>3000 人次</strong></li>
+        <li>负责《深圳卫生经济》月刊编辑出版全流程（选题策划、稿件征集、内容审核、排版校对、印刷发行），原创内容占比 <strong>37.7% → 100%</strong></li>
+        <li>独立起草领导讲话稿、年度工作报告、会议纪要、请示、通知等各类公文，多次获得领导认可</li>
+      </ul>
+    </div>
+    <div class="item">
+      <div class="item-head">
+        <p class="item-title">深圳市福田区第二人民医院 <span>质控科干事</span></p>
+        <span class="item-time">2021.02 — 2022.10</span>
+      </div>
+      <ul class="pts">
+        <li>负责科室文件流转、信息报送、月度/季度统计报表，上级系统数据填报准确率 <strong>100%</strong></li>
+        <li>参与组织全院质量管理会议：通知、材料准备、会议记录及纪要撰写，确保决议事项跟踪落实</li>
+        <li>协助全院医疗质量专项检查：与临床科室沟通协调、收集问题台账、督促整改，推动科室管理规范化</li>
+        <li>独立完成季度《质控简报》《信息简报》整理与发布，为管理层决策提供信息支持</li>
+      </ul>
+    </div>
+    <div class="item">
+      <div class="item-head">
+        <p class="item-title">深圳市福田区疾病预防控制中心 <span>跨境司机与入境旅客组副组长（借调）</span></p>
+        <span class="item-time">2022.01 — 2022.10</span>
+      </div>
+      <ul class="pts">
+        <li>突发公共卫生事件期间协助流调小组<strong>行政调度与后勤保障</strong>：协调人员排班、物资调配及信息上报</li>
+        <li>高压环境下完成流行病学调查数据的<strong>快速录入、核对、汇总与分析</strong>，撰写多份流调报告</li>
+        <li>获评福田<strong>「抗疫先锋」荣誉称号</strong>（2022.10）</li>
+      </ul>
+    </div>
+    <div class="item">
+      <div class="item-head">
+        <p class="item-title">广州致和医院管理咨询有限公司 <span>高级助理咨询师</span></p>
+        <span class="item-time">2019.06 — 2021.01</span>
+      </div>
+      <ul class="pts">
+        <li>参与 <strong>20 余个</strong>管理体系评审、优质服务、质量体系建设、满意度调查等咨询项目的资料收集、文件整理、台账建立及客户对接</li>
+        <li>协助客户单位编写<strong>管理制度、操作流程及评审台账</strong>，文字组织能力与规范化意识扎实</li>
+        <li>协助组织项目启动会、中期汇报及评审培训等会议活动，负责会务安排与材料准备；获年度最佳进步奖（2020.1）</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 教育经历 -->
+  <section class="sec">
+    <div class="sec-title"><span class="sec-no">02</span><h2>教育经历</h2><span class="sec-line"></span></div>
+    <div class="item">
+      <div class="item-head">
+        <p class="item-title">广东医科大学 <span>公共事业管理 · 本科</span></p>
+        <span class="item-time">2015.09 — 2019.06</span>
+      </div>
+      <ul class="pts">
+        <li>面向公共组织与卫生事业管理的综合性专业，行政管理、统计学与公文写作基础扎实</li>
+        <li>在校荣誉：三下乡社会实践优秀个人 · 校级优秀学生干部 ·「全国大学生百强暑期实践团队」优秀实践团队</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 专业技能 -->
+  <section class="sec">
+    <div class="sec-title"><span class="sec-no">03</span><h2>专业技能</h2><span class="sec-line"></span></div>
+    <div class="tags">
+      <span class="t-o">公文写作</span><span class="t-o">会议与活动统筹</span><span class="t-o">档案与台账管理</span>
+      <span class="t-b">Excel 数据透视表 / VLOOKUP</span><span class="t-b">SQL 数据查询</span>
+      <span>Word 排版</span><span>PPT 汇报制作</span><span>Visio 流程图</span>
+      <span>简报编写</span><span>会务接待</span>
+    </div>
+  </section>
+
+  <!-- 获奖与证书 -->
+  <section class="sec">
+    <div class="sec-title"><span class="sec-no">04</span><h2>获奖与证书</h2><span class="sec-line"></span></div>
+    <ul class="kv">
+      <li><b>2022</b> 福田「抗疫先锋」荣誉称号</li>
+      <li><b>2022</b> 年度「全院管理进步奖」（质控科·集体）</li>
+      <li><b>2020</b> 年度最佳进步奖</li>
+      <li><b>2017</b> 全国大学生百强暑期实践团队 · 优秀实践团队</li>
+      <li><b>2017</b> 三下乡社会实践优秀个人 · 校级优秀学生干部</li>
+      <li><b>持证</b> 初级统计师 · 人力资源管理师（三级）· 出版专业（初级）</li>
+      <li><b>持证</b> 大学英语六级 CET-6 · 全国计算机二级 NCRE-2 · C1 驾照</li>
+    </ul>
+  </section>
+</div>
+
+<div class="actions">
+  <button class="btn btn-solid" onclick="window.print()">打印 / 保存为 PDF ⎙</button>
+  <a class="btn" href="index.html">← 返回作品集主页</a>
+</div>
+
+</body>
+</html>
